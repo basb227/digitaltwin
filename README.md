@@ -28,6 +28,11 @@ After the prerequisits are installed, you can now open VSC, press CTRL+SHFT+E to
 - You are promted by the Remote extension to reopen the project in the container.
 - Click reopen and the Docker container will be build.
 
+## Compiling
+To compile the project simply press F1. This will open the command promt of VSC. Start typing "Run Task". Under the prompt you will see "Tasks: Run Task". Click this command and you are now able to chose: "Build x86", "Build ARM", "Deploy ARM".
+
+Compiling and debugging can be done by pressing F5. This will compile for x86 and runs the binary with gdb.
+
 ## Final note
 This would be all the required steps to start using the environment. Please feel free to comment or mail @ bas.brussen@ict.nl.
 
