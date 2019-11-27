@@ -9,11 +9,11 @@ The git is based on a Docker Container and Visual Studio Code, not Visual Studio
 
 - Visual Studio Code
 - VSC Extensions:
-* Remote - Containers
-* C/C++
-* Docker
-* CMake Tools
-* CMake
+-- Remote - Containers
+-- C/C++
+-- Docker
+-- CMake Tools
+-- CMake
 - Docker
 
 
