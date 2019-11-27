@@ -8,12 +8,7 @@ The git is based on a Docker Container and Visual Studio Code, not Visual Studio
 ## Prerequisites
 
 - Visual Studio Code
-- VSC Extensions:
--- Remote - Containers
--- C/C++
--- Docker
--- CMake Tools
--- CMake
+- VSC Extensions: Remote - Containers, C/C++, Docker, CMake Tools, CMake
 - Docker
 
 
