@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/workspaces/digitaltwin/build",
+  "command": "/usr/bin/x86_64-linux-gnu-g++-7    -g   -o CMakeFiles/digitaltwin.dir/main.cpp.o -c /workspaces/digitaltwin/main.cpp",
+  "file": "/workspaces/digitaltwin/main.cpp"
+}
+]

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libopcua.a  CMakeFiles/opcua.dir/src/open62541/open62541.c.o
+/usr/bin/ranlib libopcua.a

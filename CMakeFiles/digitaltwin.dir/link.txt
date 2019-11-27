@@ -1,0 +1,1 @@
+/usr/bin/g++    -static -rdynamic CMakeFiles/digitaltwin.dir/main.cc.o CMakeFiles/digitaltwin.dir/src/open62541/open62541.c.o  -o bin/x86/digitaltwin 

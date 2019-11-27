@@ -1,0 +1,5 @@
+/workspaces/digitaltwin/CMakeFiles/rebuild_cache.dir
+/workspaces/digitaltwin/CMakeFiles/edit_cache.dir
+/workspaces/digitaltwin/CMakeFiles/digitaltwin.dir
+/workspaces/digitaltwin/CMakeFiles/package_source.dir
+/workspaces/digitaltwin/CMakeFiles/package.dir

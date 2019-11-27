@@ -1,0 +1,3 @@
+#!/bin/bash
+cd /home/vscode/open62541/tools/nodeset_compiler
+python ./nodeset_compiler.py --types-array=UA_TYPES --existing /home/vscode/UA-Nodeset/Schema/Opc.Ua.NodeSet2.xml --xml /workspaces/digitaltwin/xml/test.xml /workspaces/digitaltwin/lib/testXML

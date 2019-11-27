@@ -1,0 +1,33 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build x86",
+            "type": "shell",
+            "command": "cmake . -DJOB=BUILD_MAIN -DARCHITECTURE=x86 -DBIN_NAME=digitaltwin && make",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Build ARM",
+            "type": "shell",
+            "command": "cmake . -DJOB=BUILD_MAIN -DARCHITECTURE=arm -DBIN_NAME=digitaltwin && make",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Deploy ARM",
+            "type": "shell",
+            "command": "cd /workspaces/digitaltwin/bash && ./deploy"
+        },
+        {
+            "label": "Build OPC UA Server",
+            "type": "shell",
+            "command": "cd /workspaces/digitaltwin/bash && ./compile_xml && cd .. && cmake . -DJOB=BUILD_TEST -DARCHITECTURE=x86 -DBIN_NAME=test_server && make"
+        }
+    ]
+}

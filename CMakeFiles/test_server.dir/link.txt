@@ -1,0 +1,1 @@
+/usr/bin/gcc   -static -rdynamic CMakeFiles/test_server.dir/src/testXML.c.o CMakeFiles/test_server.dir/src/open62541/open62541.c.o  -o bin/test/x86/test_server 

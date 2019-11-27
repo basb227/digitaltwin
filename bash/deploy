@@ -1,0 +1,2 @@
+#!/bin/bash
+echo "yes" | sshpass -p "temppwd" scp /workspaces/digitaltwin/bin/arm/digitaltwin debian@192.168.7.2:/home/debian
