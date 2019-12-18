@@ -33,12 +33,12 @@ To compile the project simply press F1. This will open the command promt of VSC.
 
 Compiling and debugging can be done by pressing F5. This will compile for x86 and runs the binary with gdb.
 
+If there is a switch in architecture, the compile task have to be run twice. The first time CMake will detect the compiler changes and the second time it will reconfigure and compile.
+
 ## Final note
 This would be all the required steps to start using the environment. Please feel free to comment or mail @ bas.brussen@ict.nl.
 
 ## TODO
-- Write wrapper of open62541 library OR find a way to compile freeopcua library for ARM.
 - Continue integration with Dezyne.
-- Abstract the hardware and extend the cmake files.
 - Create Execute task to execute the binaries on hardware.
 - Many more
