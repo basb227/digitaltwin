@@ -1,0 +1,41 @@
+# this one is important
+SET(CMAKE_SYSTEM_NAME Linux)
+#this one not so much
+SET(CMAKE_SYSTEM_VERSION 1)
+
+# specify the cross compiler
+SET(CMAKE_C_COMPILER   /usr/bin/arm-linux-gnueabihf-gcc)
+SET(CMAKE_CXX_COMPILER /usr/bin/arm-linux-gnueabihf-g++)
+
+# where is the target environment
+SET(CMAKE_FIND_ROOT_PATH  / /home)
+
+# search for programs in the build host directories
+SET(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)
+# for libraries and headers in the target directories
+SET(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
+SET(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)
+
+
+set(VCPKG_TARGET_ARCHITECTURE x64)
+set(VCPKG_CRT_LINKAGE dynamic)
+set(VCPKG_LIBRARY_LINKAGE static)
+
+set(VCPKG_CMAKE_SYSTEM_NAME Linux
+
+
+---------------------------------------------
+option(BUILD_CLIENT "Build Client" ON)
+option(BUILD_SERVER "Build Server" ON)
+
+option(SSL_SUPPORT_MBEDTLS "Support rsa-oaep password encryption using mbedtls library " OFF)
+
+option(BUILD_PYTHON "Build Python bindings" OFF)
+option(BUILD_TESTING "Build and run tests" OFF)
+OPTION(BUILD_SHARED_LIBS "Build shared libraries." ON)
+
+SET(CMAKE_C_COMPILER   /usr/bin/arm-linux-gnueabihf-gcc)
+SET(CMAKE_CXX_COMPILER /usr/bin/arm-linux-gnueabihf-g++)
+
+set(CMAKE_EXE_LINKER_FLAGS -static)
+set(CMAKE_FIND_LIBRARY_SUFFIXES .a)

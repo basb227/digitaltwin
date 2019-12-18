@@ -172,33 +172,6 @@ main.cc.s:
 	$(MAKE) -f CMakeFiles/digitaltwin.dir/build.make CMakeFiles/digitaltwin.dir/main.cc.s
 .PHONY : main.cc.s
 
-src/open62541/open62541.o: src/open62541/open62541.c.o
-
-.PHONY : src/open62541/open62541.o
-
-# target to build an object file
-src/open62541/open62541.c.o:
-	$(MAKE) -f CMakeFiles/digitaltwin.dir/build.make CMakeFiles/digitaltwin.dir/src/open62541/open62541.c.o
-.PHONY : src/open62541/open62541.c.o
-
-src/open62541/open62541.i: src/open62541/open62541.c.i
-
-.PHONY : src/open62541/open62541.i
-
-# target to preprocess a source file
-src/open62541/open62541.c.i:
-	$(MAKE) -f CMakeFiles/digitaltwin.dir/build.make CMakeFiles/digitaltwin.dir/src/open62541/open62541.c.i
-.PHONY : src/open62541/open62541.c.i
-
-src/open62541/open62541.s: src/open62541/open62541.c.s
-
-.PHONY : src/open62541/open62541.s
-
-# target to generate assembly for a file
-src/open62541/open62541.c.s:
-	$(MAKE) -f CMakeFiles/digitaltwin.dir/build.make CMakeFiles/digitaltwin.dir/src/open62541/open62541.c.s
-.PHONY : src/open62541/open62541.c.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -213,9 +186,6 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... src/open62541/open62541.o"
-	@echo "... src/open62541/open62541.i"
-	@echo "... src/open62541/open62541.s"
 .PHONY : help
 
 

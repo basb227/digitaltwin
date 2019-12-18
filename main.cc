@@ -1,50 +1,119 @@
-#include "/workspaces/digitaltwin/lib/open62541/open62541.h" 
+#include <iostream>
+#include <algorithm>
+#include <time.h>
 
-#include <signal.h>
-#include <stdlib.h>
+#include <thread>
+#include <chrono>
 
-UA_Boolean running = true;
-static void stopHandler(int sign) {
-    UA_LOG_INFO(UA_Log_Stdout, UA_LOGCATEGORY_SERVER, "received ctrl-c");
-    running = false;
+#include <opc/ua/node.h>
+#include <opc/ua/subscription.h>
+#include <opc/ua/server/server.h>
+
+
+
+
+using namespace OpcUa;
+
+class SubClient : public SubscriptionHandler
+{
+  void DataChange(uint32_t handle, const Node & node, const Variant & val, AttributeId attr) override
+  {
+    std::cout << "Received DataChange event for Node " << node << std::endl;
+  }
+};
+
+std::vector<OpcUa::Variant> MyMethod(NodeId context, std::vector<OpcUa::Variant> arguments)
+{
+  std::cout << "MyMethod called! " << std::endl;
+  std::vector<OpcUa::Variant> result;
+  result.push_back(Variant(static_cast<uint8_t>(0)));
+  return result;
 }
 
-int main(int argc, char** argv) {
-    signal(SIGINT, stopHandler);
-    signal(SIGTERM, stopHandler);
+void RunServer()
+{
+  //First setup our server
+  auto logger = spdlog::stderr_color_mt("server");
+  OpcUa::UaServer server(logger);
+  server.SetEndpoint("opc.tcp://localhost:4840/freeopcua/server");
+  server.SetServerURI("urn://exampleserver.freeopcua.github.io");
+  server.Start();
 
-    UA_Server *server = UA_Server_new();
-    UA_ServerConfig_setDefault(UA_Server_getConfig(server));
+  //then register our server namespace and get its index in server
+  uint32_t idx = server.RegisterNamespace("http://examples.freeopcua.github.io");
 
-    /* Should the server networklayer block (with a timeout) until a message
-       arrives or should it return immediately? */
-    UA_Boolean waitInternal = false;
-    UA_StatusCode retval = UA_Server_run_startup(server);
-    if(retval != UA_STATUSCODE_GOOD)
-        goto cleanup;
+  //Create our address space using different methods
+  Node objects = server.GetObjectsNode();
 
-    while(running) {
-        /* timeout is the maximum possible delay (in millisec) until the next
-           _iterate call. Otherwise, the server might miss an internal timeout
-           or cannot react to messages with the promised responsiveness. */
-        /* If multicast discovery server is enabled, the timeout does not not consider new input data (requests) on the mDNS socket.
-         * It will be handled on the next call, which may be too late for requesting clients.
-         * if needed, the select with timeout on the multicast socket server->mdnsSocket (see example in mdnsd library)
-         */
-        UA_UInt16 timeout = UA_Server_run_iterate(server, waitInternal);
-        //writeVariable(server, i);
-        //i++;
-        /* Now we can use the max timeout to do something else. In this case, we
-           just sleep. (select is used as a platform-independent sleep
-           function.) */
-        struct timeval tv;
-        tv.tv_sec = 0;
-        tv.tv_usec = timeout * 1000;
-        select(0, NULL, NULL, NULL, &tv);
+  //Add a custom object with specific nodeid
+  NodeId nid(99, idx);
+  QualifiedName qn("NewObject", idx);
+  Node newobject = objects.AddObject(nid, qn);
+
+  //Add a variable and a property with auto-generated nodeid to our custom object
+  Node myvar = newobject.AddVariable(idx, "MyVariable", Variant(8));
+  Node myprop = newobject.AddVariable(idx, "MyProperty", Variant(8.8));
+  Node mymethod = newobject.AddMethod(idx, "MyMethod", MyMethod);
+
+  //browse root node on server side
+  Node root = server.GetRootNode();
+  logger->info("Root node is: {}", root);
+  logger->info("Children are:");
+
+  for (Node node : root.GetChildren())
+    {
+      logger->info("    {}", node);
     }
-    retval = UA_Server_run_shutdown(server);
 
- cleanup:
-    UA_Server_delete(server);
-    return retval == UA_STATUSCODE_GOOD ? EXIT_SUCCESS : EXIT_FAILURE;
+
+  //Uncomment following to subscribe to datachange events inside server
+  /*
+  SubClient clt;
+  std::unique_ptr<Subscription> sub = server.CreateSubscription(100, clt);
+  sub->SubscribeDataChange(myvar);
+  */
+
+
+
+  //Now write values to address space and send events so clients can have some fun
+  uint32_t counter = 0;
+  myvar.SetValue(Variant(counter)); //will change value and trigger datachange event
+
+  //Create event
+  server.EnableEventNotification();
+  Event ev(ObjectId::BaseEventType); //you should create your own type
+  ev.Severity = 2;
+  ev.SourceNode = ObjectId::Server;
+  ev.SourceName = "Event from FreeOpcUA";
+  ev.Time = DateTime::Current();
+
+
+  logger->info("Ctrl-C to exit");
+
+  for (;;)
+    {
+      myvar.SetValue(Variant(++counter)); //will change value and trigger datachange event
+      std::stringstream ss;
+      ss << "This is event number: " << counter;
+      ev.Message = LocalizedText(ss.str());
+      server.TriggerEvent(ev);
+      std::this_thread::sleep_for(std::chrono::milliseconds(5000));
+    }
+
+  server.Stop();
+}
+
+int main(int argc, char ** argv)
+{
+  try
+    {
+      RunServer();
+    }
+
+  catch (const std::exception & exc)
+    {
+      std::cout << exc.what() << std::endl;
+    }
+
+  return 0;
 }

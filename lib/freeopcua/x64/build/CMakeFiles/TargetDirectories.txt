@@ -1,0 +1,16 @@
+/home/vscode/freeopcua/build/CMakeFiles/install/strip.dir
+/home/vscode/freeopcua/build/CMakeFiles/install.dir
+/home/vscode/freeopcua/build/CMakeFiles/list_install_components.dir
+/home/vscode/freeopcua/build/CMakeFiles/rebuild_cache.dir
+/home/vscode/freeopcua/build/CMakeFiles/edit_cache.dir
+/home/vscode/freeopcua/build/CMakeFiles/package.dir
+/home/vscode/freeopcua/build/CMakeFiles/install/local.dir
+/home/vscode/freeopcua/build/CMakeFiles/example_server.dir
+/home/vscode/freeopcua/build/CMakeFiles/opcuacore.dir
+/home/vscode/freeopcua/build/CMakeFiles/package_source.dir
+/home/vscode/freeopcua/build/CMakeFiles/opcuaclient.dir
+/home/vscode/freeopcua/build/CMakeFiles/example_client.dir
+/home/vscode/freeopcua/build/CMakeFiles/opcuaprotocol.dir
+/home/vscode/freeopcua/build/CMakeFiles/opcuaserver.dir
+/home/vscode/freeopcua/build/CMakeFiles/opcuaclientapp.dir
+/home/vscode/freeopcua/build/CMakeFiles/opcuaserverapp.dir

@@ -1,0 +1,16 @@
+/root/freeopcua/build/CMakeFiles/install/strip.dir
+/root/freeopcua/build/CMakeFiles/install.dir
+/root/freeopcua/build/CMakeFiles/list_install_components.dir
+/root/freeopcua/build/CMakeFiles/rebuild_cache.dir
+/root/freeopcua/build/CMakeFiles/edit_cache.dir
+/root/freeopcua/build/CMakeFiles/package.dir
+/root/freeopcua/build/CMakeFiles/install/local.dir
+/root/freeopcua/build/CMakeFiles/example_server.dir
+/root/freeopcua/build/CMakeFiles/opcuacore.dir
+/root/freeopcua/build/CMakeFiles/package_source.dir
+/root/freeopcua/build/CMakeFiles/opcuaclient.dir
+/root/freeopcua/build/CMakeFiles/example_client.dir
+/root/freeopcua/build/CMakeFiles/opcuaprotocol.dir
+/root/freeopcua/build/CMakeFiles/opcuaserver.dir
+/root/freeopcua/build/CMakeFiles/opcuaclientapp.dir
+/root/freeopcua/build/CMakeFiles/opcuaserverapp.dir

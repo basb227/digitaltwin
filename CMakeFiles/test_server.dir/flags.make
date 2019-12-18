@@ -6,5 +6,5 @@ C_FLAGS =
 
 C_DEFINES = 
 
-C_INCLUDES = -I/workspaces/digitaltwin/lib/open62541 
+C_INCLUDES = -I/workspaces/digitaltwin/lib/freeopcua 
 

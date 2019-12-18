@@ -1,1 +1,1 @@
-/usr/bin/g++    -static -rdynamic CMakeFiles/digitaltwin.dir/main.cc.o CMakeFiles/digitaltwin.dir/src/open62541/open62541.c.o  -o bin/x86/digitaltwin 
+/usr/bin/g++    -static -rdynamic CMakeFiles/digitaltwin.dir/main.cc.o  -o bin/x86/digitaltwin  -L/workspaces/digitaltwin/lib/freeopcua/x64/build/lib -Wl,-rpath,/workspaces/digitaltwin/lib/freeopcua/x64/build/lib -lpthread -lopcuacore -lopcuaprotocol -lopcuaclient -lopcuaserver 
