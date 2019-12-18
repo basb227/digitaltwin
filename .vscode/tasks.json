@@ -4,7 +4,7 @@
         {
             "label": "Build x86",
             "type": "shell",
-            "command": "cmake . -DJOB=BUILD_MAIN -DARCHITECTURE=x86 -DBIN_NAME=digitaltwin && make",
+            "command": "cmake . -DJOB=BUILD_MAIN -DARCHITECTURE=x86 -DBIN_NAME=digitaltwin -DCMAKE_C_COMPILER=/usr/bin/gcc -DCMAKE_CXX_COMPILER=/usr/bin/g++ && make",
             "group": {
                 "kind": "build",
                 "isDefault": true
@@ -13,7 +13,7 @@
         {
             "label": "Build ARM",
             "type": "shell",
-            "command": "cmake . -DJOB=BUILD_MAIN -DARCHITECTURE=arm -DBIN_NAME=digitaltwin && make",
+            "command": "cmake . -DJOB=BUILD_MAIN -DARCHITECTURE=arm -DBIN_NAME=digitaltwin -DCMAKE_C_COMPILER=/usr/bin/arm-linux-gnueabihf-gcc -DCMAKE_CXX_COMPILER=/usr/bin/arm-linux-gnueabihf-g++ && make",
             "group": {
                 "kind": "build",
                 "isDefault": true

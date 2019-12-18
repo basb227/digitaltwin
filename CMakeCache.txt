@@ -20,9 +20,6 @@ ARCHITECTURE:UNINITIALIZED=x86
 //No help, variable specified on the command line.
 BIN_NAME:UNINITIALIZED=digitaltwin
 
-//No help, variable specified on the command line.
-BUILD_SHARED_LIBS:UNINITIALIZED=OFF
-
 //Path to a program.
 CMAKE_AR:FILEPATH=/usr/bin/ar
 
@@ -239,9 +236,6 @@ CPACK_SOURCE_TZ:BOOL=ON
 CPACK_SOURCE_ZIP:BOOL=OFF
 
 //No help, variable specified on the command line.
-DIR:UNINITIALIZED=/workspaces/digitaltwin/bin/x86
-
-//No help, variable specified on the command line.
 JOB:UNINITIALIZED=BUILD_MAIN
 
 //Value Computed by CMake
@@ -249,24 +243,6 @@ digitaltwin_BINARY_DIR:STATIC=/workspaces/digitaltwin
 
 //Value Computed by CMake
 digitaltwin_SOURCE_DIR:STATIC=/workspaces/digitaltwin
-
-//Path to a library.
-freeopc:FILEPATH=/workspaces/digitaltwin/lib/freeopcua/arm/libopcuaserver.so
-
-//Dependencies for target
-freeopc_LIB_DEPENDS:STATIC=
-
-//Path to a library.
-freeopcua:FILEPATH=/workspaces/digitaltwin/lib/freeopcua/arm/libopcuaserver.so
-
-//The directory containing a CMake configuration file for freeopcua.
-freeopcua_DIR:PATH=freeopcua_DIR-NOTFOUND
-
-//Dependencies for target
-freeopcua_LIB_DEPENDS:STATIC=
-
-//Dependencies for target
-opcua_LIB_DEPENDS:STATIC=
 
 
 ########################
