@@ -65,5 +65,6 @@
     },
     "C_Cpp.intelliSenseEngineFallback": "Enabled",
     "editor.fontSize": 12,
-    "C_Cpp.default.configurationProvider": "vector-of-bool.cmake-tools"
+    "C_Cpp.default.configurationProvider": "vector-of-bool.cmake-tools",
+    "cmake.configureOnOpen": false
 }

@@ -145,32 +145,32 @@ digitaltwin/fast:
 	$(MAKE) -f CMakeFiles/digitaltwin.dir/build.make CMakeFiles/digitaltwin.dir/build
 .PHONY : digitaltwin/fast
 
-main.o: main.cc.o
+src/server.o: src/server.cc.o
 
-.PHONY : main.o
+.PHONY : src/server.o
 
 # target to build an object file
-main.cc.o:
-	$(MAKE) -f CMakeFiles/digitaltwin.dir/build.make CMakeFiles/digitaltwin.dir/main.cc.o
-.PHONY : main.cc.o
+src/server.cc.o:
+	$(MAKE) -f CMakeFiles/digitaltwin.dir/build.make CMakeFiles/digitaltwin.dir/src/server.cc.o
+.PHONY : src/server.cc.o
 
-main.i: main.cc.i
+src/server.i: src/server.cc.i
 
-.PHONY : main.i
+.PHONY : src/server.i
 
 # target to preprocess a source file
-main.cc.i:
-	$(MAKE) -f CMakeFiles/digitaltwin.dir/build.make CMakeFiles/digitaltwin.dir/main.cc.i
-.PHONY : main.cc.i
+src/server.cc.i:
+	$(MAKE) -f CMakeFiles/digitaltwin.dir/build.make CMakeFiles/digitaltwin.dir/src/server.cc.i
+.PHONY : src/server.cc.i
 
-main.s: main.cc.s
+src/server.s: src/server.cc.s
 
-.PHONY : main.s
+.PHONY : src/server.s
 
 # target to generate assembly for a file
-main.cc.s:
-	$(MAKE) -f CMakeFiles/digitaltwin.dir/build.make CMakeFiles/digitaltwin.dir/main.cc.s
-.PHONY : main.cc.s
+src/server.cc.s:
+	$(MAKE) -f CMakeFiles/digitaltwin.dir/build.make CMakeFiles/digitaltwin.dir/src/server.cc.s
+.PHONY : src/server.cc.s
 
 # Help Target
 help:
@@ -183,9 +183,9 @@ help:
 	@echo "... digitaltwin"
 	@echo "... package_source"
 	@echo "... package"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... src/server.o"
+	@echo "... src/server.i"
+	@echo "... src/server.s"
 .PHONY : help
 
 

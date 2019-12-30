@@ -1,1 +1,1 @@
-/usr/bin/g++    -rdynamic CMakeFiles/digitaltwin.dir/main.cc.o  -o bin/x86/digitaltwin  -L/workspaces/digitaltwin/lib/freeopcua/x64/build/lib -Wl,-rpath,/workspaces/digitaltwin/lib/freeopcua/x64/build/lib -lpthread -lopcuacore -lopcuaprotocol -lopcuaclient -lopcuaserver 
+/usr/bin/arm-linux-gnueabihf-g++    -rdynamic CMakeFiles/digitaltwin.dir/src/server.cc.o  -o bin/arm/digitaltwin  -L/workspaces/digitaltwin/lib/freeopcua/arm/build/lib -Wl,-rpath,/workspaces/digitaltwin/lib/freeopcua/arm/build/lib -lpthread -lopcuacore -lopcuaprotocol -lopcuaclient -lopcuaserver 

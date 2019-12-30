@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/digitaltwin.dir/main.cc.o"
-  "bin/x86/digitaltwin.pdb"
-  "bin/x86/digitaltwin"
+  "CMakeFiles/digitaltwin.dir/src/server.cc.o"
+  "bin/arm/digitaltwin.pdb"
+  "bin/arm/digitaltwin"
 )
 
 # Per-language clean rules from dependency scanning.

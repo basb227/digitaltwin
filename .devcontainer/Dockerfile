@@ -24,7 +24,7 @@ RUN apt-get -y install git procps lsb-release
 RUN apt-get -y install build-essential cmake cppcheck valgrind 
 #
 # Install BOOST
-RUN apt install libboost-all-dev
+RUN apt install libboost-all-dev -y
 #
 # ARM compilers
 RUN apt-get install libc6-armel-cross libc6-dev-armel-cross binutils-arm-linux-gnueabi libncurses5-dev -y 
@@ -65,8 +65,8 @@ RUN sudo apt install git sshpass -y
 #&& sudo apt update -y \
 #&& sudo apt-get install libopen62541-1 -y \
 #&& cd ~/ \
-RUN git clone https://github.com/open62541/open62541.git 
-RUN git clone https://github.com/OPCFoundation/UA-Nodeset.git
+#RUN git clone https://github.com/open62541/open62541.git 
+#RUN git clone https://github.com/OPCFoundation/UA-Nodeset.git
 #&& cd open62541 \
 #&& mkdir build \
 #&& cd build \
