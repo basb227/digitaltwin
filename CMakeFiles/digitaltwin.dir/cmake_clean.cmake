@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/digitaltwin.dir/src/server.cc.o"
+  "CMakeFiles/digitaltwin.dir/main.cc.o"
   "bin/arm/digitaltwin.pdb"
   "bin/arm/digitaltwin"
 )

@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/workspaces/digitaltwin/main.cc" "/workspaces/digitaltwin/CMakeFiles/digitaltwin.dir/main.cc.o"
+  "/workspaces/digitaltwin/src/ServerGenerator.cc" "/workspaces/digitaltwin/CMakeFiles/servergenerator.dir/src/ServerGenerator.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -15,7 +15,6 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/workspaces/digitaltwin/CMakeFiles/servergenerator.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

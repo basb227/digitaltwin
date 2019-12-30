@@ -244,6 +244,9 @@ digitaltwin_BINARY_DIR:STATIC=/workspaces/digitaltwin
 //Value Computed by CMake
 digitaltwin_SOURCE_DIR:STATIC=/workspaces/digitaltwin
 
+//Dependencies for target
+servergenerator_LIB_DEPENDS:STATIC=
+
 
 ########################
 # INTERNAL cache entries

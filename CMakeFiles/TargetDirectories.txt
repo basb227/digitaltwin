@@ -3,3 +3,4 @@
 /workspaces/digitaltwin/CMakeFiles/digitaltwin.dir
 /workspaces/digitaltwin/CMakeFiles/package_source.dir
 /workspaces/digitaltwin/CMakeFiles/package.dir
+/workspaces/digitaltwin/CMakeFiles/servergenerator.dir

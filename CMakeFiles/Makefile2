@@ -29,6 +29,9 @@ SUFFIXES =
 .SUFFIXES: .hpux_make_needs_suffix_list
 
 
+# Produce verbose output by default.
+VERBOSE = 1
+
 # Suppress display of executed commands.
 $(VERBOSE).SILENT:
 
@@ -63,7 +66,7 @@ CMAKE_BINARY_DIR = /workspaces/digitaltwin
 # Target rules for target CMakeFiles/digitaltwin.dir
 
 # All Build rule for target.
-CMakeFiles/digitaltwin.dir/all:
+CMakeFiles/digitaltwin.dir/all: CMakeFiles/servergenerator.dir/all
 	$(MAKE) -f CMakeFiles/digitaltwin.dir/build.make CMakeFiles/digitaltwin.dir/depend
 	$(MAKE) -f CMakeFiles/digitaltwin.dir/build.make CMakeFiles/digitaltwin.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspaces/digitaltwin/CMakeFiles --progress-num=1,2 "Built target digitaltwin"
@@ -76,7 +79,7 @@ all: CMakeFiles/digitaltwin.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/digitaltwin.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/digitaltwin/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/digitaltwin/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/digitaltwin.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/digitaltwin/CMakeFiles 0
 .PHONY : CMakeFiles/digitaltwin.dir/rule
@@ -93,6 +96,43 @@ CMakeFiles/digitaltwin.dir/clean:
 
 # clean rule for target.
 clean: CMakeFiles/digitaltwin.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/servergenerator.dir
+
+# All Build rule for target.
+CMakeFiles/servergenerator.dir/all:
+	$(MAKE) -f CMakeFiles/servergenerator.dir/build.make CMakeFiles/servergenerator.dir/depend
+	$(MAKE) -f CMakeFiles/servergenerator.dir/build.make CMakeFiles/servergenerator.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspaces/digitaltwin/CMakeFiles --progress-num=3,4 "Built target servergenerator"
+.PHONY : CMakeFiles/servergenerator.dir/all
+
+# Include target in all.
+all: CMakeFiles/servergenerator.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/servergenerator.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/digitaltwin/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/servergenerator.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/digitaltwin/CMakeFiles 0
+.PHONY : CMakeFiles/servergenerator.dir/rule
+
+# Convenience name for target.
+servergenerator: CMakeFiles/servergenerator.dir/rule
+
+.PHONY : servergenerator
+
+# clean rule for target.
+CMakeFiles/servergenerator.dir/clean:
+	$(MAKE) -f CMakeFiles/servergenerator.dir/build.make CMakeFiles/servergenerator.dir/clean
+.PHONY : CMakeFiles/servergenerator.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/servergenerator.dir/clean
 
 .PHONY : clean
 

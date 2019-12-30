@@ -23,6 +23,9 @@ SUFFIXES =
 .SUFFIXES: .hpux_make_needs_suffix_list
 
 
+# Produce verbose output by default.
+VERBOSE = 1
+
 # Suppress display of executed commands.
 $(VERBOSE).SILENT:
 
@@ -145,32 +148,72 @@ digitaltwin/fast:
 	$(MAKE) -f CMakeFiles/digitaltwin.dir/build.make CMakeFiles/digitaltwin.dir/build
 .PHONY : digitaltwin/fast
 
-src/server.o: src/server.cc.o
+#=============================================================================
+# Target rules for targets named servergenerator
 
-.PHONY : src/server.o
+# Build rule for target.
+servergenerator: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 servergenerator
+.PHONY : servergenerator
+
+# fast build rule for target.
+servergenerator/fast:
+	$(MAKE) -f CMakeFiles/servergenerator.dir/build.make CMakeFiles/servergenerator.dir/build
+.PHONY : servergenerator/fast
+
+main.o: main.cc.o
+
+.PHONY : main.o
 
 # target to build an object file
-src/server.cc.o:
-	$(MAKE) -f CMakeFiles/digitaltwin.dir/build.make CMakeFiles/digitaltwin.dir/src/server.cc.o
-.PHONY : src/server.cc.o
+main.cc.o:
+	$(MAKE) -f CMakeFiles/digitaltwin.dir/build.make CMakeFiles/digitaltwin.dir/main.cc.o
+.PHONY : main.cc.o
 
-src/server.i: src/server.cc.i
+main.i: main.cc.i
 
-.PHONY : src/server.i
+.PHONY : main.i
 
 # target to preprocess a source file
-src/server.cc.i:
-	$(MAKE) -f CMakeFiles/digitaltwin.dir/build.make CMakeFiles/digitaltwin.dir/src/server.cc.i
-.PHONY : src/server.cc.i
+main.cc.i:
+	$(MAKE) -f CMakeFiles/digitaltwin.dir/build.make CMakeFiles/digitaltwin.dir/main.cc.i
+.PHONY : main.cc.i
 
-src/server.s: src/server.cc.s
+main.s: main.cc.s
 
-.PHONY : src/server.s
+.PHONY : main.s
 
 # target to generate assembly for a file
-src/server.cc.s:
-	$(MAKE) -f CMakeFiles/digitaltwin.dir/build.make CMakeFiles/digitaltwin.dir/src/server.cc.s
-.PHONY : src/server.cc.s
+main.cc.s:
+	$(MAKE) -f CMakeFiles/digitaltwin.dir/build.make CMakeFiles/digitaltwin.dir/main.cc.s
+.PHONY : main.cc.s
+
+src/ServerGenerator.o: src/ServerGenerator.cc.o
+
+.PHONY : src/ServerGenerator.o
+
+# target to build an object file
+src/ServerGenerator.cc.o:
+	$(MAKE) -f CMakeFiles/servergenerator.dir/build.make CMakeFiles/servergenerator.dir/src/ServerGenerator.cc.o
+.PHONY : src/ServerGenerator.cc.o
+
+src/ServerGenerator.i: src/ServerGenerator.cc.i
+
+.PHONY : src/ServerGenerator.i
+
+# target to preprocess a source file
+src/ServerGenerator.cc.i:
+	$(MAKE) -f CMakeFiles/servergenerator.dir/build.make CMakeFiles/servergenerator.dir/src/ServerGenerator.cc.i
+.PHONY : src/ServerGenerator.cc.i
+
+src/ServerGenerator.s: src/ServerGenerator.cc.s
+
+.PHONY : src/ServerGenerator.s
+
+# target to generate assembly for a file
+src/ServerGenerator.cc.s:
+	$(MAKE) -f CMakeFiles/servergenerator.dir/build.make CMakeFiles/servergenerator.dir/src/ServerGenerator.cc.s
+.PHONY : src/ServerGenerator.cc.s
 
 # Help Target
 help:
@@ -183,9 +226,13 @@ help:
 	@echo "... digitaltwin"
 	@echo "... package_source"
 	@echo "... package"
-	@echo "... src/server.o"
-	@echo "... src/server.i"
-	@echo "... src/server.s"
+	@echo "... servergenerator"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
+	@echo "... src/ServerGenerator.o"
+	@echo "... src/ServerGenerator.i"
+	@echo "... src/ServerGenerator.s"
 .PHONY : help
 
 

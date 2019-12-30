@@ -1,0 +1,2 @@
+/usr/bin/ar qc libservergenerator.a  CMakeFiles/servergenerator.dir/src/ServerGenerator.cc.o
+/usr/bin/ranlib libservergenerator.a

@@ -13,20 +13,18 @@ project(digitaltwin VERSION 0.1.0)
 
 include_directories(inc)
 
-# Build OpcUA server
 if(${JOB} STREQUAL "BUILD_MAIN")
   set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin/${ARCHITECTURE})
-  add_executable(${BIN_NAME} ${PROJECT_SOURCE_DIR}/src/server.cc)
+  add_executable(${BIN_NAME} main.cc)
 elseif(${JOB} STREQUAL "BUILD_TEST")
   set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin/test/${ARCHITECTURE})
   add_executable(${BIN_NAME} ${PROJECT_SOURCE_DIR}/lib/testXML.h ${PROJECT_SOURCE_DIR}/src/testXML.c)
 endif()
 
-set(DCMAKE_C_COMPILER /usr/bin/arm-linux-gnueabihf-gcc) 
-set(DCMAKE_CXX_COMPILER /usr/bin/arm-linux-gnueabihf-g++)
+add_library(servergenerator src/ServerGenerator.cc )
 
 target_include_directories(${BIN_NAME} PRIVATE inc)
-target_link_libraries(${BIN_NAME} pthread opcuacore opcuaprotocol opcuaclient opcuaserver)
+target_link_libraries(${BIN_NAME} servergenerator pthread opcuacore opcuaprotocol opcuaclient opcuaserver)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})

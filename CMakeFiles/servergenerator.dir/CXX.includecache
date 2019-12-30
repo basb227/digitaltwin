@@ -6,7 +6,23 @@
 
 #IncludeRegexTransform: 
 
-/workspaces/digitaltwin/main.cc
+/workspaces/digitaltwin/src/ServerGenerator.cc
+iostream
+-
+algorithm
+-
+time.h
+-
+thread
+-
+chrono
+-
+opc/ua/node.h
+-
+opc/ua/subscription.h
+-
+opc/ua/server/server.h
+-
 ServerGenerator.h
 -
 
