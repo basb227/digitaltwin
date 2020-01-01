@@ -63,15 +63,15 @@ include CMakeFiles/servergenerator.dir/flags.make
 CMakeFiles/servergenerator.dir/src/ServerGenerator.cc.o: CMakeFiles/servergenerator.dir/flags.make
 CMakeFiles/servergenerator.dir/src/ServerGenerator.cc.o: src/ServerGenerator.cc
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/digitaltwin/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/servergenerator.dir/src/ServerGenerator.cc.o"
-	/usr/bin/arm-linux-gnueabihf-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/servergenerator.dir/src/ServerGenerator.cc.o -c /workspaces/digitaltwin/src/ServerGenerator.cc
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/servergenerator.dir/src/ServerGenerator.cc.o -c /workspaces/digitaltwin/src/ServerGenerator.cc
 
 CMakeFiles/servergenerator.dir/src/ServerGenerator.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/servergenerator.dir/src/ServerGenerator.cc.i"
-	/usr/bin/arm-linux-gnueabihf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/digitaltwin/src/ServerGenerator.cc > CMakeFiles/servergenerator.dir/src/ServerGenerator.cc.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/digitaltwin/src/ServerGenerator.cc > CMakeFiles/servergenerator.dir/src/ServerGenerator.cc.i
 
 CMakeFiles/servergenerator.dir/src/ServerGenerator.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/servergenerator.dir/src/ServerGenerator.cc.s"
-	/usr/bin/arm-linux-gnueabihf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/digitaltwin/src/ServerGenerator.cc -o CMakeFiles/servergenerator.dir/src/ServerGenerator.cc.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/digitaltwin/src/ServerGenerator.cc -o CMakeFiles/servergenerator.dir/src/ServerGenerator.cc.s
 
 CMakeFiles/servergenerator.dir/src/ServerGenerator.cc.o.requires:
 

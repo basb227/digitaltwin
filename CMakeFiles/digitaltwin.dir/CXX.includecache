@@ -9,15 +9,23 @@
 /workspaces/digitaltwin/main.cc
 ServerGenerator.h
 -
+iostream
+-
+vector
+-
 
 inc/ServerGenerator.h
 iostream
+-
+vector
 -
 opc/ua/node.h
 -
 opc/ua/subscription.h
 -
 opc/ua/server/server.h
+-
+boost/scoped_ptr.hpp
 -
 
 inc/opc/common/addons_core/addon_manager.h
